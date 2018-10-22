@@ -1,0 +1,19 @@
+Total de Tweets = COUNT(TweetsAzure[Nome])
+
+Tipo =
+IF (
+    TweetsAzure[Score] < 0.39,
+    "Negativo",
+    IF (
+        TweetsAzure[Score] > 0.40
+            && TweetsAzure[Score] <= 0.79,
+        "Neutro",
+        IF ( TweetsAzure[Score] > 0.80, "Positivo" )
+    )
+)
+
+Negativo = CALCULATE ( [Total de Tweets], TweetsAzure[Tipo] = "Negativo" )
+
+Neutro = CALCULATE ( [Total de Tweets], TweetsAzure[Tipo] = "Neutro" )
+
+Positivo = CALCULATE ( [Total de Tweets], TweetsAzure[Tipo] = "Positivo" )
