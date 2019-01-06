@@ -1,2 +1,2 @@
 # pbi-azureconference
-Demo usada na apresenta;'ao do Azure Conference 2018 sobre Power BI e  Cognitive Services.
+Demo usada na apresentação do Azure Conference 2018 sobre Power BI e  Cognitive Services.
